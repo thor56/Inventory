@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 //    private Button buttonChoose;
 //    private Button buttonUpload;
 //    private ImageView imageView;
-private Button btnChoose, btnUpload;
+private Button btnChoose, btnUpload,viewInven;
     private ImageView imageView;
 
     private Uri filePath;
@@ -169,6 +169,7 @@ private Button btnChoose, btnUpload;
         //image section
         btnChoose = (Button) findViewById(R.id.btnChoose);
         btnUpload = (Button) findViewById(R.id.btnUpload);
+        viewInven = (Button) findViewById(R.id.viewInven);
         imageView = (ImageView) findViewById(R.id.imgView);
 
         storage = FirebaseStorage.getInstance();
@@ -184,6 +185,15 @@ private Button btnChoose, btnUpload;
             @Override
             public void onClick(View v) {
                 chooseImage();
+            }
+        });
+        viewInven.setOnClickListener(
+                new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, InventoryView.class);
+
+                MainActivity.this.startActivity(myIntent);
             }
         });
 
