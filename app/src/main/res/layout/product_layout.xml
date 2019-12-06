@@ -21,6 +21,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="120dp"
                 android:layout_height="90dp"
+                android:src="@android:mipmap/sym_def_app_icon"
                 android:padding="4dp" />
 
             <TextView
@@ -30,7 +31,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/imageView"
                 android:text="Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+
+
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
             <TextView
@@ -45,7 +48,7 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 
             <TextView
-                android:id="@+id/textViewRating"
+                android:id="@+id/textViewPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewShortDesc"
@@ -60,16 +63,15 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textViewPrice"
+                android:id="@+id/textViewRating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textViewRating"
+                android:layout_below="@+id/textViewPrice"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@id/imageView"
                 android:text="INR 56990"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textStyle="bold" />
+                />
 
         </RelativeLayout>
 

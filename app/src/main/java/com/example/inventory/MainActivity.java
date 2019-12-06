@@ -241,7 +241,7 @@ private Button btnChoose, btnUpload;
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
-                             uploadPath = taskSnapshot.getMetadata().getPath();
+                             uploadPath = String.valueOf(taskSnapshot.getMetadata().getPath());
                             Toast.makeText(MainActivity.this, "Uploaded" + uploadPath, Toast.LENGTH_SHORT).show();
                         }
                     })

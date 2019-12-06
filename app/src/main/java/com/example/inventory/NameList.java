@@ -1,6 +1,7 @@
 package com.example.inventory;
 
 import com.google.firebase.database.IgnoreExtraProperties;
+import com.google.firebase.storage.StorageReference;
 
 @IgnoreExtraProperties
 public class NameList{

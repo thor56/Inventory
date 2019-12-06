@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.google.firebase.storage.StorageReference;
+
 import java.util.List;
 
 public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.ProductViewHolder>{
@@ -36,8 +39,14 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Prod
         holder.textViewTitle.setText(product.getName());
         holder.textViewShortDesc.setText(product.getDescription());
         holder.textviewPrice.setText(String.valueOf(product.getMeasure_unit()));
-        holder.textViewRating.setText(String.valueOf(product.getUpload_path()));
-//        holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage(), null));
+       // holder.textViewRating.setText(String.valueOf(product.getUpload_path()));
+
+//        StorageReference storageReference = product.getUpload_path();
+
+//        Glide.with(mCtx).load(product.getUpload_path()).into(holder.imageView);
+
+
+
     }
 
     @Override
@@ -47,20 +56,23 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Prod
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imageView;
+       public ImageView imageView;
         TextView textViewTitle, textViewShortDesc, textViewRating, textviewPrice;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
 
-            imageView = itemView.findViewById(R.id.imageView);
+//            imageView = itemView.findViewById(R.id.imageView);
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
             textViewRating = itemView.findViewById(R.id.textViewRating);
             textviewPrice = itemView.findViewById(R.id.textViewPrice);
 
+
         }
     }
+
+
 
 
 }
